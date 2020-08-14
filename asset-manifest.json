@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/trivialPursuitProjectSix/static/css/main.5f361e03.chunk.css",
+    "main.js": "/trivialPursuitProjectSix/static/js/main.21cc9f84.chunk.js",
+    "main.js.map": "/trivialPursuitProjectSix/static/js/main.21cc9f84.chunk.js.map",
+    "runtime-main.js": "/trivialPursuitProjectSix/static/js/runtime-main.306e1584.js",
+    "runtime-main.js.map": "/trivialPursuitProjectSix/static/js/runtime-main.306e1584.js.map",
+    "static/js/2.635bbf4b.chunk.js": "/trivialPursuitProjectSix/static/js/2.635bbf4b.chunk.js",
+    "static/js/2.635bbf4b.chunk.js.map": "/trivialPursuitProjectSix/static/js/2.635bbf4b.chunk.js.map",
+    "index.html": "/trivialPursuitProjectSix/index.html",
+    "precache-manifest.b8de7323782488cf5af87e98ea49e2ad.js": "/trivialPursuitProjectSix/precache-manifest.b8de7323782488cf5af87e98ea49e2ad.js",
+    "service-worker.js": "/trivialPursuitProjectSix/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/trivialPursuitProjectSix/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.635bbf4b.chunk.js.LICENSE.txt": "/trivialPursuitProjectSix/static/js/2.635bbf4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.306e1584.js",
+    "static/js/2.635bbf4b.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.21cc9f84.chunk.js"
+  ]
+}
