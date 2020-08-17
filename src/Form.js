@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import apiRequest from './apiRequest';
 
 class Form extends Component {
     constructor() {
         super();
         this.state = {
-            triviaCategory: 'Any Category',
+            triviaCategory: 'Any',
             nbrOfQuestions:10
         };
     }
@@ -22,11 +23,21 @@ class Form extends Component {
         })
     
         console.log([value]);
-    
     }
     
     handleSubmit = (event) => {
         event.preventDefault();
+
+        const amount = this.state.nbrOfQuestions
+        const category = this.state.triviaCategory
+
+
+        apiRequest.getQuestions(category, amount).then((res) => {
+            const actualState = this.state;
+            actualState.apiData = res.data.results;
+            this.setState(actualState);
+            console.log(this.state.apiData);
+        })
     
     }
     
