@@ -1,25 +1,29 @@
 import React, { Component } from "react";
 import "./App.css";
-import Form from './Form';
-
+import Form from "./Form";
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       userChoice: [],
-    }
+      apiData: [],
+    };
   }
-
 
   render() {
     return (
       <div className="App">
-        <h1>Not So Trivial Pursuit</h1>
-        <Form />
+        <header>
+          <h1>Not So Trivial Pursuit</h1>
+          <Form />
+        </header>
+        <main>
+          <GameCard apiData={this.state.apiData} />
+        </main>
       </div>
     );
   }
 }
-  
+
 export default App;
