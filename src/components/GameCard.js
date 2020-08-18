@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "./Button";
 import ScoreCard from "./ScoreCard";
+import parse from "html-react-parser";
 
 class GameCard extends Component {
   constructor(props) {
@@ -54,13 +55,13 @@ class GameCard extends Component {
           <p>Correct!</p>
         </div>
         <div>
-          <p>{question}</p>
+          <p>{parse(question)}</p>
         </div>
         <div className="answerSpace">
           {answers.map((answer, index) => {
             return (
               <Button key={index} onClick={() => this.checkAnswer(answer)}>
-                {answer}
+                {parse(answer)}
               </Button>
             );
           })}
@@ -70,7 +71,7 @@ class GameCard extends Component {
       <article className="GameCard GameCardIncorrect">
         <div className="cardTitle">
           <h2>{this.props.gameName}</h2>
-          <span>{difficulty} | </span>
+          <span>Question difficulty: {difficulty}</span>
           <ScoreCard
             score={this.state.score}
             gameLength={this.props.apiData.length}
@@ -78,13 +79,13 @@ class GameCard extends Component {
           <p>Waiting for correct answer...</p>
         </div>
         <div>
-          <p>{question}</p>
+          <p>{parse(question)}</p>
         </div>
         <div className="answerSpace">
           {answers.map((answer, index) => {
             return (
               <Button key={index} onClick={() => this.checkAnswer(answer)}>
-                {answer}
+                {parse(answer)}
               </Button>
             );
           })}
