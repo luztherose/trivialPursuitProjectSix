@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "./Button";
+import saveGame from '.././functionality';
 import ScoreCard from "./ScoreCard";
 import parse from "html-react-parser";
 
@@ -10,6 +11,7 @@ class GameCard extends Component {
       questionNumber: 0,
       score: 0,
       questionCorrect: false,
+      apiData: this.props.apiData
     };
   }
 
@@ -66,6 +68,7 @@ class GameCard extends Component {
             );
           })}
         </div>
+        <button onClick = {()=> {saveGame()}} apiData={this.props.apiData}>Save Game</button>
       </article>
     ) : (
       <article className="GameCard GameCardIncorrect">
@@ -90,6 +93,7 @@ class GameCard extends Component {
             );
           })}
         </div>
+        <button onClick = {()=> {saveGame(this.props.gameName, this.state.apiData)}}>Save Game</button>
       </article>
     );
   }

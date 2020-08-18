@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
 import axios from "axios";
 import firebase from "./firebase";
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "./App.css";
 import Form from "./components/Form";
 import GameCard from "./components/GameCard";
 import apiRequest from "./apiRequest";
+import "./App.scss";
+
 
 class App extends Component {
   constructor() {
@@ -77,7 +79,9 @@ class App extends Component {
               );
             }}
           />
-          <Route path="/savedGames" component={SavedGames} />
+          <Route path="/savedGames" component={SavedGames} 
+            apiData={this.state.apiData} gameName={this.state.gameName}
+          />
           <nav>
             <ul>
               <button>
@@ -88,6 +92,7 @@ class App extends Component {
               </button>
             </ul>
           </nav>
+          <Footer />
         </div>
       </Router>
     );
