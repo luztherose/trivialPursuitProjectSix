@@ -15,7 +15,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <h1>Not So Trivial Pursuit</h1>
-          <Route path="/newGame" component = { NewGame } />
+          <Route path="/newGame" component = { Form } />
           <Route path="/savedGames" component = { SavedGames } />
           <nav>
             <ul>
