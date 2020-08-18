@@ -32,6 +32,7 @@ class GameCard extends Component {
       this.state.questionNumber < this.props.apiData.length
     ) {
       this.setState({
+        questionNumber: this.state.questionNumber + 1,
         questionCorrect: false,
       });
     }

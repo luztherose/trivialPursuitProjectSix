@@ -35,7 +35,6 @@ class App extends Component {
         actualState,
         gameCardReady: true,
       });
-      console.log(this.state.apiData);
     });
   };
 
