@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import apiRequest from "./apiRequest";
+import apiRequest from "../apiRequest";
 
 class Form extends Component {
   constructor() {

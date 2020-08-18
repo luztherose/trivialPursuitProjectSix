@@ -39,11 +39,12 @@ class GameCard extends Component {
       question,
       incorrect_answers,
       correct_answer,
-    } = this.state.question;
+    } = this.props.question;
     const answers = [correct_answer].concat(incorrect_answers).sort();
     return this.state.questionCorrect === true ? (
       <article className="GameCard GameCardCorrect">
         <div className="cardTitle">
+          <h2>{this.props.gameName}</h2>
           <span>{difficulty} | </span>
           <ScoreCard
             score={this.state.score}
@@ -67,6 +68,7 @@ class GameCard extends Component {
     ) : (
       <article className="GameCard GameCardIncorrect">
         <div className="cardTitle">
+          <h2>{this.props.gameName}</h2>
           <span>{difficulty} | </span>
           <ScoreCard
             score={this.state.score}
