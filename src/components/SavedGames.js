@@ -33,14 +33,6 @@ class SavedGames extends Component {
         })
     }
 
-    // handleClick = (e) => {
-    //     e.preventDefault();
-
-    //     const dbRef = firebase.database().ref();
-
-    //     dbRef.push(this.state.)
-    // }
-
     render(){
         return(
             <section className="savedGameList">
