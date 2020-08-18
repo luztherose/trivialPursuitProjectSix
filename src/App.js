@@ -5,8 +5,7 @@ import axios from 'axios';
 import firebase from './firebase';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import "./App.css";
-import Form from './Form';
-
+import Form from "./components/Form";
 
 class App extends Component {
 
@@ -28,5 +27,5 @@ class App extends Component {
     );
   }
 }
-  
+
 export default App;
