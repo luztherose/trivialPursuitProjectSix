@@ -18,12 +18,12 @@ class SavedGames extends Component {
 
             const savedGamesState = [];
 
-            for (let gameProperty in res){
+            for (let gameKey in res){
                 savedGamesState.push({
-                    id: gameProperty,
-					gameName: res[gameProperty].gameName,
-					gameCategory: res[gameProperty].category,
-					numQuestions: res[gameProperty].length
+                    id: gameKey,
+					gameName: res[gameKey].gameName,
+					gameCategory: res[gameKey].category,
+					numQuestions: res[gameKey].length
                 })
             }
 
@@ -40,12 +40,12 @@ class SavedGames extends Component {
                     <h2>Saved Games</h2>
                 </div>
                 <ul className="allSavedGames">
-                    {this.state.games.map(game => {
+                    {this.state.games.map((game, index) => {
                         return(
-                            <li className="savedGame">
+                            <li className="savedGame" key={index}>
                                 <div className="wrapper">
                                     <h3>{game.gameName}</h3>
-                                    <p>Game Category: {game.category}</p>
+                                    <p>Category: {game.gameCategory}</p>
                                     <p>Number of Questions: {game.numQuestions}</p>
                                 </div>
                                 <button onSubmit = {this.handleClick}>Play</button>
@@ -56,8 +56,6 @@ class SavedGames extends Component {
             </section>
         )
     }
-
-
 }
 
 export default SavedGames;

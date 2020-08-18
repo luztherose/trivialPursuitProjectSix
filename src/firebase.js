@@ -2,16 +2,16 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyApx33veThmjDgCCgNAB4xkjl1uD1ea2Fc",
-    authDomain: "triviapursuit-69b19.firebaseapp.com",
-    databaseURL: "https://triviapursuit-69b19.firebaseio.com",
-    projectId: "triviapursuit-69b19",
-    storageBucket: "triviapursuit-69b19.appspot.com",
-    messagingSenderId: "898202637460",
-    appId: "1:898202637460:web:0f0a6fdcad1f6440139081"
+const firebaseConfig = {
+    apiKey: "AIzaSyCD2SeUiuQN0IHwYp4-0Z3pY8hRy_6RdpI",
+    authDomain: "triviapur.firebaseapp.com",
+    databaseURL: "https://triviapur.firebaseio.com",
+    projectId: "triviapur",
+    storageBucket: "triviapur.appspot.com",
+    messagingSenderId: "81080274402",
+    appId: "1:81080274402:web:941656f82a968b02357dbb"
 };
-// Initialize Firebase
+  // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 export default firebase;
