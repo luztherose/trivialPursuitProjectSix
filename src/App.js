@@ -39,6 +39,20 @@ class App extends Component {
     });
   };
 
+  handleChange = (event) => {
+    event.preventDefault();
+
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
+
+    console.log([value]);
+  };
+
   render() {
     return (
       <Router>
@@ -49,7 +63,12 @@ class App extends Component {
             render={() => {
               return (
                 <>
-                  <Form handleSubmit={this.handleSubmit} />
+                  <Form
+                    handleSubmit={this.handleSubmit}
+                    handleChange={this.handleChange}
+                    triviaCategory={this.state.triviaCategory}
+                    nbrOfQuestions={this.state.nbrOfQuestions}
+                  />
                   {this.state.gameCardReady ? (
                     <GameCard
                       apiData={this.state.apiData}

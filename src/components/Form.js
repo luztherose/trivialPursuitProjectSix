@@ -2,29 +2,6 @@ import React, { Component } from "react";
 import apiRequest from "../apiRequest";
 
 class Form extends Component {
-  constructor() {
-    super();
-    this.state = {
-      triviaCategory: "Any",
-      nbrOfQuestions: 10,
-      apiData: [],
-    };
-  }
-
-  handleChange = (event) => {
-    event.preventDefault();
-
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value,
-    });
-
-    console.log([value]);
-  };
-
   render() {
     return (
       <form onSubmit={(e) => this.props.handleSubmit(e)}>
@@ -32,8 +9,8 @@ class Form extends Component {
         <select
           name="triviaCategory"
           className="form-control"
-          value={this.state.triviaCategory}
-          onChange={(e) => this.handleChange(e)}
+          value={this.props.triviaCategory}
+          onChange={(e) => this.props.handleChange(e)}
         >
           <option value="Any">Any Category</option>
           <option value="9">General Knowledge</option>
@@ -66,8 +43,8 @@ class Form extends Component {
         <select
           name="nbrOfQuestions"
           className="form-control"
-          value={this.state.nbrOfQuestions}
-          onChange={(e) => this.handleChange(e)}
+          value={this.props.nbrOfQuestions}
+          onChange={(e) => this.props.handleChange(e)}
         >
           <option value="10">10</option>
           <option value="15">15</option>
