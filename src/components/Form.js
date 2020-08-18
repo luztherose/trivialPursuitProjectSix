@@ -25,29 +25,15 @@ class Form extends Component {
     console.log([value]);
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    const amount = this.state.nbrOfQuestions;
-    const category = this.state.triviaCategory;
-
-    apiRequest.getQuestions(category, amount).then((res) => {
-      const actualState = this.state;
-      actualState.apiData = res.data.results;
-      this.setState(actualState);
-      console.log(this.state.apiData);
-    });
-  };
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={(e) => this.props.handleSubmit(e)}>
         <label> Select Category:</label>
         <select
           name="triviaCategory"
           className="form-control"
           value={this.state.triviaCategory}
-          onChange={this.handleChange}
+          onChange={(e) => this.handleChange(e)}
         >
           <option value="Any">Any Category</option>
           <option value="9">General Knowledge</option>
@@ -81,7 +67,7 @@ class Form extends Component {
           name="nbrOfQuestions"
           className="form-control"
           value={this.state.nbrOfQuestions}
-          onChange={this.handleChange}
+          onChange={(e) => this.handleChange(e)}
         >
           <option value="10">10</option>
           <option value="15">15</option>
