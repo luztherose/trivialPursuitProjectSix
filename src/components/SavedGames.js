@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import firebase from '../firebase.js';
 
 class SavedGames extends Component {
@@ -19,7 +19,7 @@ class SavedGames extends Component {
             const savedGamesState = [];
 
             for (let gameProperty in res){
-                savedGamesList.push({
+                savedGamesState.push({
                     id: gameProperty,
 					gameName: res[gameProperty].gameName,
 					gameCategory: res[gameProperty].category,
