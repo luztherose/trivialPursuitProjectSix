@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
-import DisplaySavedGame from './components/DisplaySavedGame';
 import axios from "axios";
 import firebase from "./firebase";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from "./components/Form";
 import GameCard from "./components/GameCard";
 import apiRequest from "./apiRequest";
 import "./sass/App.scss";
-
 
 class App extends Component {
   constructor() {
@@ -18,7 +16,7 @@ class App extends Component {
       triviaCategory: "Any",
       nbrOfQuestions: 10,
       apiData: [],
-      gameName: "",
+      gameName: "a great game",
       gameCardReady: false,
     };
   }
@@ -36,6 +34,7 @@ class App extends Component {
         actualState,
         gameCardReady: true,
       });
+      console.log(this.state.apiData);
     });
   };
 
@@ -53,17 +52,11 @@ class App extends Component {
     console.log([value]);
   };
 
-  handleSavedGame = (event) => {
-    event.preventDefault();
-    return (
-      <GameCard />
-    )
-  }
-
   render() {
     return (
       <Router>
         <div className="App">
+          <div className="wrapper"></div>
           <h1>Not So Trivial Pursuit</h1>
           <Route
             path="/newGame"
@@ -78,7 +71,7 @@ class App extends Component {
                   />
                   {this.state.gameCardReady ? (
                     <GameCard
-                      apiData={this.state.apiData}
+                      apidata={this.state.apiData}
                       gameName={this.state.gameName}
                     />
                   ) : null}
@@ -86,10 +79,12 @@ class App extends Component {
               );
             }}
           />
-          <Route path="/savedGames" render = { () => <SavedGames loadSavedGame={this.handleSavedGame}/>} 
-            
+          <Route
+            path="/savedGames"
+            component={SavedGames}
+            apiData={this.state.apiData}
+            gameName={this.state.gameName}
           />
-          <Route path="/savedGames/:gameId" component= { DisplaySavedGame }/>
           <nav>
             <ul>
               <button>

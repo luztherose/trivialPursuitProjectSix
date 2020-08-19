@@ -67,7 +67,14 @@ class GameCard extends Component {
             );
           })}
         </div>
-        <button onClick = {()=> {saveGame()}} apiData={this.props.apiData}>Save Game</button>
+        <button
+          onClick={() => {
+            saveGame();
+          }}
+          apidata={this.props.apidata}
+        >
+          Save Game
+        </button>
       </article>
     ) : (
       <article className="GameCard GameCardIncorrect">
