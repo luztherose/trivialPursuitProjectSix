@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import GameCard from './GameCard';
+import { Route, Link } from 'react-router-dom';
 import firebase from '../firebase.js';
 
 class SavedGames extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             games: []
         }
@@ -23,7 +25,7 @@ class SavedGames extends Component {
                     id: gameKey,
 					gameName: res[gameKey].gameName,
 					gameCategory: res[gameKey].category,
-					numQuestions: res[gameKey].length
+					numQuestions: res[gameKey].numQuestions
                 })
             }
 
@@ -40,6 +42,8 @@ class SavedGames extends Component {
     }
 
     render(){
+        console.log(this.props)
+
         return(
             <section className="savedGameList">
                 <div className="wrapper">
@@ -57,9 +61,9 @@ class SavedGames extends Component {
                                     <p>Category: {game.gameCategory}</p>
                                     <p>Number of Questions: {game.numQuestions}</p>
                                 </div>
-                                <button onSubmit = { this.handleSavedGame }>Play</button>
+                                <Link to={`/savedGames/${game.id}`}>Play</Link>
                                 <button onClick = { deleteFunction }>Delete</button>
-                            </li>
+                            </li> 
                         )
                     })}
                 </ul>
