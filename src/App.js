@@ -17,7 +17,7 @@ class App extends Component {
       triviaCategory: "Any",
       nbrOfQuestions: 10,
       apiData: [],
-      gameName: "a great game",
+      gameName: "",
       gameCardReady: false,
     };
   }
