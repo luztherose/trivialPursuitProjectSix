@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
+import DisplaySavedGame from './components/DisplaySavedGame';
 import axios from "axios";
 import firebase from "./firebase";
 import Footer from './components/Footer';
@@ -85,16 +86,17 @@ class App extends Component {
               );
             }}
           />
-          <Route path="/savedGames" component={SavedGames} 
-            apiData={this.state.apiData} gameName={this.state.gameName}
+          <Route path="/savedGames" render = { () => <SavedGames loadSavedGame={this.handleSavedGame}/>} 
+            
           />
+          <Route path="/savedGames/:gameId" component= { DisplaySavedGame }/>
           <nav>
             <ul>
               <button>
                 <Link to="/newGame">New Game</Link>
               </button>
               <button>
-                <Link to="/savedGames" savedGame={this.handleSavedGame}>Saved Games</Link>
+                <Link to="/savedGames">Saved Games</Link>
               </button>
             </ul>
           </nav>
