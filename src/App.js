@@ -53,6 +53,13 @@ class App extends Component {
     console.log([value]);
   };
 
+  handleSavedGame = (event) => {
+    event.preventDefault();
+    return (
+      <GameCard />
+    )
+  }
+
   render() {
     return (
       <Router>
@@ -88,7 +95,7 @@ class App extends Component {
                 <Link to="/newGame">New Game</Link>
               </button>
               <button>
-                <Link to="/savedGames">Saved Games</Link>
+                <Link to="/savedGames" savedGame={this.handleSavedGame}>Saved Games</Link>
               </button>
             </ul>
           </nav>

@@ -57,7 +57,7 @@ class SavedGames extends Component {
                                     <p>Category: {game.gameCategory}</p>
                                     <p>Number of Questions: {game.numQuestions}</p>
                                 </div>
-                                <button onSubmit = {this.handleClick}>Play</button>
+                                <button onSubmit = { this.handleSavedGame }>Play</button>
                                 <button onClick = { deleteFunction }>Delete</button>
                             </li>
                         )
