@@ -9,7 +9,7 @@ const ScoreCard = (props) => {
       </p>
       <p>
         Congratulations, you are the big winner! Press "New Game" to play again
-        or "save game" to store this one for future play.
+        or "Save game" to store this one for future play.
       </p>
     </article>
   ) : (
