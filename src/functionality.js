@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import firebase from "./firebase";
+import firebase from './firebase';
 
 const saveGame = (gameName, apiData) => {
   const newGameSave = {
