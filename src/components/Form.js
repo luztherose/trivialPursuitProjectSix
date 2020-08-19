@@ -5,6 +5,14 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={(e) => this.props.handleSubmit(e)}>
+
+        <label>Game Name: </label>
+        <input 
+        name= "gameName"
+        className="form-control" 
+        value={ this.props.gameName }
+        onChange={(e) => this.props.handleChange(e)} ></input>
+  
         <label> Select Category:</label>
         <select
           name="triviaCategory"
