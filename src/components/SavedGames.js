@@ -33,6 +33,12 @@ class SavedGames extends Component {
         })
     }
 
+    deleteGame = (gameID) => {
+        const dbRef = firebase.database().ref();
+        dbRef.child(gameID).remove();
+        alert('Deleted!');
+    }
+
     render(){
         return(
             <section className="savedGameList">
@@ -41,6 +47,9 @@ class SavedGames extends Component {
                 </div>
                 <ul className="allSavedGames">
                     {this.state.games.map((game, index) => {
+                        const deleteFunction = () => {
+                            this.deleteGame(game.id)
+                        }
                         return(
                             <li className="savedGame" key={index}>
                                 <div className="wrapper">
@@ -49,6 +58,7 @@ class SavedGames extends Component {
                                     <p>Number of Questions: {game.numQuestions}</p>
                                 </div>
                                 <button onSubmit = {this.handleClick}>Play</button>
+                                <button onClick = { deleteFunction }>Delete</button>
                             </li>
                         )
                     })}

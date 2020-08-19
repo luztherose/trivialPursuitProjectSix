@@ -17,7 +17,7 @@ class GameCard extends Component {
 
   checkAnswer = (userAnswer) => {
     if (
-      userAnswer ==
+      userAnswer ===
         this.props.apiData[this.state.questionNumber].correct_answer &&
       this.state.questionNumber < this.props.apiData.length
     ) {
