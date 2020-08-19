@@ -98,9 +98,9 @@ class GameCard extends Component {
         </div>
         <button
           onClick={() => {
-            saveGame();
+            saveGame(this.props.gameName, this.props.apidata);
           }}
-          apidata={this.props.apidata}
+        
         >
           Save Game
         </button>
