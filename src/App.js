@@ -16,7 +16,7 @@ class App extends Component {
       triviaCategory: "Any",
       nbrOfQuestions: 10,
       apiData: [],
-      gameName: "a great game",
+      gameName: "more great games",
       gameCardReady: false,
     };
   }
@@ -52,6 +52,13 @@ class App extends Component {
     console.log([value]);
   };
 
+  saveSetter = (savedGame) => {
+    this.setState({
+      apiData: savedGame,
+      gameCardReady: true,
+    });
+  };
+
   render() {
     return (
       <Router>
@@ -81,9 +88,17 @@ class App extends Component {
           />
           <Route
             path="/savedGames"
-            component={SavedGames}
-            apiData={this.state.apiData}
-            gameName={this.state.gameName}
+            render={() => {
+              return (
+                <>
+                  <SavedGames
+                    apiData={this.state.apiData}
+                    gameName={this.state.gameName}
+                    saveSetter={this.saveSetter}
+                  />
+                </>
+              );
+            }}
           />
           <nav>
             <ul>
