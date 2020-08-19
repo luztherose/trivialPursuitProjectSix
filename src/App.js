@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from "./components/Form";
 import GameCard from "./components/GameCard";
 import apiRequest from "./apiRequest";
-import "./App.scss";
+import "./sass/App.scss";
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
       triviaCategory: "Any",
       nbrOfQuestions: 10,
       apiData: [],
-      gameName: "a great game",
+      gameName: "",
       gameCardReady: false,
     };
   }
