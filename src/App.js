@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
 import axios from "axios";
 import firebase from "./firebase";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from "./components/Form";
 import GameCard from "./components/GameCard";
 import apiRequest from "./apiRequest";
 import "./sass/App.scss";
-
 
 class App extends Component {
   constructor() {
@@ -54,10 +53,8 @@ class App extends Component {
 
   handleSavedGame = (event) => {
     event.preventDefault();
-    return (
-      <GameCard />
-    )
-  }
+    return <GameCard />;
+  };
 
   render() {
     return (
@@ -77,7 +74,7 @@ class App extends Component {
                   />
                   {this.state.gameCardReady ? (
                     <GameCard
-                      apiData={this.state.apiData}
+                      apidata={this.state.apiData}
                       gameName={this.state.gameName}
                     />
                   ) : null}
@@ -85,8 +82,11 @@ class App extends Component {
               );
             }}
           />
-          <Route path="/savedGames" component={SavedGames} 
-            apiData={this.state.apiData} gameName={this.state.gameName}
+          <Route
+            path="/savedGames"
+            component={SavedGames}
+            apiData={this.state.apiData}
+            gameName={this.state.gameName}
           />
           <nav>
             <ul>
@@ -94,7 +94,9 @@ class App extends Component {
                 <Link to="/newGame">New Game</Link>
               </button>
               <button>
-                <Link to="/savedGames" savedGame={this.handleSavedGame}>Saved Games</Link>
+                <Link to="/savedGames" savedGame={this.handleSavedGame}>
+                  Saved Games
+                </Link>
               </button>
             </ul>
           </nav>
