@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
-import axios from "axios";
-import firebase from "./firebase";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from "./components/Form";
@@ -16,7 +14,7 @@ class App extends Component {
       triviaCategory: "Any",
       nbrOfQuestions: 10,
       apiData: [],
-      gameName: "more great games",
+      gameName: "",
       gameCardReady: false,
     };
   }
@@ -59,12 +57,22 @@ class App extends Component {
     });
   };
 
+  newGameClick = (e) => {
+    this.setState({
+      gameCardReady: false,
+      triviaCategory: "Any",
+      nbrOfQuestions: 10,
+      apiData: [],
+      gameName: ""
+    })
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
           <div className="wrapper"></div>
-          <h1>Not So Trivial Pursuit</h1>
+          <h1><Link exact to="/">Not So Trivial Pursuit</Link></h1>
           <Route
             path="/newGame"
             render={() => {
@@ -75,6 +83,7 @@ class App extends Component {
                     handleChange={this.handleChange}
                     triviaCategory={this.state.triviaCategory}
                     nbrOfQuestions={this.state.nbrOfQuestions}
+                    gameName={this.state.gameName}
                   />
                   {this.state.gameCardReady ? (
                     <GameCard
@@ -103,7 +112,7 @@ class App extends Component {
           <nav>
             <ul>
               <button>
-                <Link to="/newGame">New Game</Link>
+                <Link to="/newGame" onClick={ this.newGameClick }>New Game</Link>
               </button>
               <button>
                 <Link to="/savedGames">Saved Games</Link>
