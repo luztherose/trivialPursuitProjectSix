@@ -1,0 +1,60 @@
+
+@media (max-width:960px) {
+
+    .wrapper {
+        width:100%;
+    }
+
+    .GameCard .cardTitle .flexContainer {
+        display: block;
+    }
+
+    .GameCard .scoreCard {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+}
+@media (max-width:768px) {
+
+    form,
+    .GameCard{
+        width: 85%;
+    }
+
+
+    h1 a{
+        font-size: 5.5rem;
+    }
+    h2{
+        font-size: 3.8rem;
+    }
+
+    nav ul {
+        margin: 0 auto;
+        
+    }
+    nav button {
+        margin: 3rem 0;
+    }
+    
+}
+
+@media (max-width:500px){
+    html {
+        font-size: 90%;
+    }
+    form,
+    .GameCard{
+        width: 85%;
+    }
+
+    form select, form input[type="text"]{
+        width:90%;
+    }
+
+    .GameCard .questionBox {
+        padding: 1rem;
+    }
+}
+

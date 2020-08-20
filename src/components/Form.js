@@ -5,15 +5,18 @@ class Form extends Component {
     return (
       <form onSubmit={(e) => this.props.handleSubmit(e)}>
 
-        <label>Game Name: </label>
+        <label>Game Name</label>
         <input 
         name= "gameName"
+        type= "text"
         className="form-control" 
         required="required"
         value={ this.props.gameName }
-        onChange={(e) => this.props.handleChange(e)} ></input>
+        onChange={(e) => this.props.handleChange(e)} 
+        required="required"
+        placeholder= "enter your name here"></input>
   
-        <label> Select Category:</label>
+        <label>Category</label>
         <select
           name="triviaCategory"
           className="form-control"
@@ -47,7 +50,7 @@ class Form extends Component {
           <option value="32">Entertainment: Cartoon &amp; Animations</option>
         </select>
 
-        <label>Number of Questions:</label>
+        <label>Number of Questions</label>
         <select
           name="nbrOfQuestions"
           className="form-control"
@@ -59,7 +62,7 @@ class Form extends Component {
           <option value="20">20</option>
         </select>
 
-        <input type="submit" value="Select" />
+        <input type="submit" value="Game on!" />
       </form>
     );
   }
