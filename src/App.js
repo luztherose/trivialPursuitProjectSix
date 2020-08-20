@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
+import Header from './components/Header';
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from "./components/Form";
@@ -72,7 +73,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="wrapper"></div>
-          <h1><Link exact to="/">Not So Trivial Pursuit</Link></h1>
+          <Header />
           <Route
             path="/newGame"
             render={() => {
