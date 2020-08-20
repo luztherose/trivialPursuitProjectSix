@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import apiRequest from "../apiRequest";
 
 class Form extends Component {
   render() {
@@ -10,6 +9,7 @@ class Form extends Component {
         <input 
         name= "gameName"
         className="form-control" 
+        required="required"
         value={ this.props.gameName }
         onChange={(e) => this.props.handleChange(e)} ></input>
   
