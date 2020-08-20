@@ -51,10 +51,11 @@ class App extends Component {
     console.log([value]);
   };
 
-  saveSetter = (savedGame) => {
+  saveSetter = (savedGame, gameName) => {
     this.setState({
       apiData: savedGame,
       gameCardReady: true,
+      gameName: gameName,
     });
   };
 
@@ -86,7 +87,6 @@ class App extends Component {
                       nbrOfQuestions={this.state.nbrOfQuestions}
                       gameName={this.state.gameName}
                       gameCardReady={this.state.gameCardReady}
-
                     />
                     {this.state.gameCardReady ? (
                       <GameCard
@@ -115,7 +115,9 @@ class App extends Component {
             <nav>
               <ul>
                 <button>
-                  <Link to="/newGame" onClick={ this.newGameClick }>New Game</Link>
+                  <Link to="/newGame" onClick={this.newGameClick}>
+                    New Game
+                  </Link>
                 </button>
                 <button>
                   <Link to="/savedGames">Saved Games</Link>
