@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/trivialPursuitProjectSix/static/css/main.0c40ce0c.chunk.css",
+    "main.css": "/trivialPursuitProjectSix/static/css/main.8d1df528.chunk.css",
     "main.js": "/trivialPursuitProjectSix/static/js/main.c64b5631.chunk.js",
     "main.js.map": "/trivialPursuitProjectSix/static/js/main.c64b5631.chunk.js.map",
     "runtime-main.js": "/trivialPursuitProjectSix/static/js/runtime-main.306e1584.js",
@@ -8,15 +8,15 @@
     "static/js/2.cebb3d59.chunk.js": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js",
     "static/js/2.cebb3d59.chunk.js.map": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js.map",
     "index.html": "/trivialPursuitProjectSix/index.html",
-    "precache-manifest.65dbb71e7b5dfddcebf9777c599c57fd.js": "/trivialPursuitProjectSix/precache-manifest.65dbb71e7b5dfddcebf9777c599c57fd.js",
+    "precache-manifest.9bd7a972fc1a12da9cfbfe05a4c4ffb8.js": "/trivialPursuitProjectSix/precache-manifest.9bd7a972fc1a12da9cfbfe05a4c4ffb8.js",
     "service-worker.js": "/trivialPursuitProjectSix/service-worker.js",
-    "static/css/main.0c40ce0c.chunk.css.map": "/trivialPursuitProjectSix/static/css/main.0c40ce0c.chunk.css.map",
+    "static/css/main.8d1df528.chunk.css.map": "/trivialPursuitProjectSix/static/css/main.8d1df528.chunk.css.map",
     "static/js/2.cebb3d59.chunk.js.LICENSE.txt": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.306e1584.js",
     "static/js/2.cebb3d59.chunk.js",
-    "static/css/main.0c40ce0c.chunk.css",
+    "static/css/main.8d1df528.chunk.css",
     "static/js/main.c64b5631.chunk.js"
   ]
 }
