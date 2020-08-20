@@ -8,9 +8,8 @@ const ScoreCard = (props) => {
         {props.score} / {props.gameLength}
       </p>
       <p>
-        Congratulations on finishing the quiz! Select new options using the form
-        above to play again or click the "Save Game" button below to store these
-        questions for future play.
+        Congratulations on finishing the quiz! Click the "new game" to play
+        again or click "save game" to store these questions for future play.
       </p>
     </article>
   ) : (

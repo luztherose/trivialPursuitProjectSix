@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SavedGames from "./components/SavedGames";
-import Header from './components/Header';
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from "./components/Form";
@@ -64,9 +64,9 @@ class App extends Component {
       triviaCategory: "Any",
       nbrOfQuestions: 10,
       apiData: [],
-      gameName: ""
-    })
-  }
+      gameName: "",
+    });
+  };
 
   render() {
     return (
@@ -85,6 +85,7 @@ class App extends Component {
                     triviaCategory={this.state.triviaCategory}
                     nbrOfQuestions={this.state.nbrOfQuestions}
                     gameName={this.state.gameName}
+                    gameCardReady={this.state.gameCardReady}
                   />
                   {this.state.gameCardReady ? (
                     <GameCard
@@ -112,12 +113,14 @@ class App extends Component {
           />
           <nav>
             <ul>
-              <button>
-                <Link to="/newGame" onClick={ this.newGameClick }>New Game</Link>
-              </button>
-              <button>
+              <li>
+                <Link to="/newGame" onClick={this.newGameClick}>
+                  New Game
+                </Link>
+              </li>
+              <li>
                 <Link to="/savedGames">Saved Games</Link>
-              </button>
+              </li>
             </ul>
           </nav>
           <Footer />
