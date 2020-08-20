@@ -71,55 +71,56 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="wrapper"></div>
-          <h1><Link exact to="/">Not So Trivial Pursuit</Link></h1>
-          <Route
-            path="/newGame"
-            render={() => {
-              return (
-                <>
-                  <Form
-                    handleSubmit={this.handleSubmit}
-                    handleChange={this.handleChange}
-                    triviaCategory={this.state.triviaCategory}
-                    nbrOfQuestions={this.state.nbrOfQuestions}
-                    gameName={this.state.gameName}
-                  />
-                  {this.state.gameCardReady ? (
-                    <GameCard
-                      apidata={this.state.apiData}
+          <div className="wrapper">
+            <h1><Link exact to="/">Not So Trivial Pursuit</Link></h1>
+            <Route
+              path="/newGame"
+              render={() => {
+                return (
+                  <>
+                    <Form
+                      handleSubmit={this.handleSubmit}
+                      handleChange={this.handleChange}
+                      triviaCategory={this.state.triviaCategory}
+                      nbrOfQuestions={this.state.nbrOfQuestions}
                       gameName={this.state.gameName}
                     />
-                  ) : null}
-                </>
-              );
-            }}
-          />
-          <Route
-            path="/savedGames"
-            render={() => {
-              return (
-                <>
-                  <SavedGames
-                    apiData={this.state.apiData}
-                    gameName={this.state.gameName}
-                    saveSetter={this.saveSetter}
-                  />
-                </>
-              );
-            }}
-          />
-          <nav>
-            <ul>
-              <button>
-                <Link to="/newGame" onClick={ this.newGameClick }>New Game</Link>
-              </button>
-              <button>
-                <Link to="/savedGames">Saved Games</Link>
-              </button>
-            </ul>
-          </nav>
-          <Footer />
+                    {this.state.gameCardReady ? (
+                      <GameCard
+                        apidata={this.state.apiData}
+                        gameName={this.state.gameName}
+                      />
+                    ) : null}
+                  </>
+                );
+              }}
+            />
+            <Route
+              path="/savedGames"
+              render={() => {
+                return (
+                  <>
+                    <SavedGames
+                      apiData={this.state.apiData}
+                      gameName={this.state.gameName}
+                      saveSetter={this.saveSetter}
+                    />
+                  </>
+                );
+              }}
+            />
+            <nav>
+              <ul>
+                <button>
+                  <Link to="/newGame" onClick={ this.newGameClick }>New Game</Link>
+                </button>
+                <button>
+                  <Link to="/savedGames">Saved Games</Link>
+                </button>
+              </ul>
+            </nav>
+            <Footer />
+          </div>
         </div>
       </Router>
     );

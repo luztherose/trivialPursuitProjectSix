@@ -1,30 +1,108 @@
-.GameCard {
-  background-color: $darkestColour;
-  padding: 1rem;
-  border-radius: 0.5em;
-  color: $lightestColour;
-  box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
-  margin-bottom: 2rem;
-  .cardTitle {
-    background-color: $backgroundColour;
-    border: 2px solid $accentColour;
-    border-radius: 0.5em;
-    box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
-  }
-  h2 {
-    font-family: "Caveat Brush", cursive;
-    text-shadow: 2px 2px 2px $accentColour;
-    margin: 0.5rem 0 1rem 0;
-  }
-  .answerSpace {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 1rem;
-    background-color: $backgroundColour;
-    border: 2px solid $accentColour;
-    border-radius: 0.5em;
-    box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
+
+  .GameCard {
     padding: 1rem;
-    margin-bottom: 1rem;
+    border-radius: 0.5em;
+    color: $lightestColour;
+    margin-bottom: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    
+    button{
+      @include button;
+      background-color: transparent;
+      box-shadow: none;
+      border: 2px solid $darkestColour;
+      color:white;
+    }
+
+    button:hover {
+      @include buttonHover;
+      border: 2px solid $darkestColour;
+
+    }
+
+
+  .cardTitle {
+    border-radius: 0.5em;
+    width:90%;
+    margin: 0 auto;
+
+    p{
+      font-size: 2rem;
+      margin-top: 4rem;
+    }
+
+    .flexContainer {
+      display: flex;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+
+      span{
+        font-size: 1.7rem;
+        color:$accentColour;
+      }
+    }
+  }
+
+  .questionBox {
+    box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664); 
+    border: 4px solid $accentColour; 
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px 40px;
+    border-radius: 0.5em;
+    
+    p{
+    font-size: 1.5rem;
+    color: $darkestColour;
+    }
+  }
+
+ 
+
+  .answerSpace {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    // grid-gap: 1rem;
+    // border-radius: 0.5em;
+    // padding: 1rem;
+    // margin-bottom: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    button{
+      color: black;
+      font-size: 1.3rem;
+      border-radius: 0.25em;
+      padding: 1rem 2rem 1rem 2rem;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s;
+      background-color: lightgrey;
+      border: none;
+      width: 300px;
+      margin: 10px auto;
+    }
+
+    button:hover{
+      @include buttonHover;
+    }
+
+  }
+
+  .scoreCard{
+    font-size: 1.8rem;
+    color:$accentColour;
+    display:flex;
+
+    p{
+      margin: 0;
+      padding-left: 10px;
+    }
   }
 }
+
+

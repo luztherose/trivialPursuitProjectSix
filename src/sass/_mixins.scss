@@ -1,0 +1,19 @@
+@mixin button {
+    background-color: $accentColour;
+    font-family: "lato", sans-serif;
+    color: black;
+    border-radius: 0.25em;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
+    cursor: pointer;
+    width: 30%;
+    margin: 1.5rem auto;
+    font-size: 1.5rem;
+    border:none;
+}
+
+@mixin buttonHover {
+    background-color:$darkestColour;
+    color: white;
+    border:none;
+}
