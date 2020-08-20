@@ -3,6 +3,7 @@ import Button from "./Button";
 import saveGame from ".././functionality";
 import ScoreCard from "./ScoreCard";
 import parse from "html-react-parser";
+import QuestionCorrect from "./QuestionCorrect";
 
 class GameCard extends Component {
   constructor(props) {
@@ -83,6 +84,10 @@ class GameCard extends Component {
           <p>
             Question number {this.state.questionNumber + 1}: {parse(question)}
           </p>
+          <QuestionCorrect
+            questionCorrect={this.state.questionCorrect}
+            questionNumber={this.state.questionNumber}
+          />
           <div className="answerSpace">
             {answers.map((answer, index) => {
               return (
