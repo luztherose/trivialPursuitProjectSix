@@ -13,9 +13,8 @@ class Form extends Component {
           value={this.props.gameName}
           onChange={(e) => this.props.handleChange(e)}
           aria-label="write a title for your quiz"
-          placeholder= "Enter a game name!"></input>
-
-
+          placeholder= "Enter a game name!"
+        ></input>
         <label> Select Category:</label>
 
         <select
@@ -62,13 +61,14 @@ class Form extends Component {
           <option value="15">15</option>
           <option value="20">20</option>
         </select>
-
-        <input
+        {this.props.gameCardReady ? null : (
+          <input
           type="submit"
           aria-label="select quiz options and begin game"
           value="Select"
         />
 
+        )}
       </form>
     );
   }

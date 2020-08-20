@@ -5,6 +5,10 @@ nav {
     margin: 4rem auto;
     justify-content: center;
   }
+  
+  li {
+    margin-bottom: 2rem;
+  }
 
   button {
     background-color: transparent;
@@ -17,14 +21,12 @@ nav {
 
   }
   
-  a{
+  a {
     @include button;
     padding: 1rem 5rem;
     border: 2px solid $darkestColour;
     background-color: transparent;
     color:white;
-
-    
   }
 
   a:hover {
