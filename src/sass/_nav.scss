@@ -32,7 +32,6 @@ nav {
   a:hover {
     @include buttonHover;
     border: 2px solid white;
-    background-color: white;
     color:black;
   }
 }
