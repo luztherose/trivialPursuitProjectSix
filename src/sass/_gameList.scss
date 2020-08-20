@@ -5,15 +5,18 @@
   margin-bottom: 2rem;
 
   .savedGame {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem;
+    border: 2px solid $accentColour;
+  }
+
+  p{
+    font-size: 1.3rem;
+
   }
 }
 
 .controlButtons {
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  // grid-gap: 1rem;
   display: flex;
   flex-wrap: wrap;
   margin:0 auto;
@@ -22,8 +25,13 @@
   button,
   a {
     @include button;
-    width:300px;
-
+    width:260px;
+    font-size: 1.3rem;
   }
 
+  button:hover,
+ 
+  a:hover{
+  @include buttonHover;
+  }
 }
