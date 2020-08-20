@@ -12,8 +12,7 @@ class Form extends Component {
           value={this.props.gameName}
           onChange={(e) => this.props.handleChange(e)}
           aria-label="write a title for your quiz"
-          placeholder= "Enter a game name!"></input>
-
+          placeholder= "Enter a game name!"
         ></input>
 
         <label> Select Category:</label>
