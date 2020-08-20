@@ -101,6 +101,7 @@ class GameCard extends Component {
         <button
           onClick={() => {
             saveGame(this.props.gameName, this.props.apidata);
+            alert("Your game has been saved! Click Saved Games to see it ✅");
           }}
           aria-label="save game"
         >

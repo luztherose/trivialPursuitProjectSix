@@ -9,6 +9,7 @@ class SaveButton extends Component {
           aria-label="load game"
           onClick={() => {
             this.props.gameToParent(this.props.thisIndex);
+            alert(" Game loaded to memory! Click play loaded game to continue.")
           }}
         >
           Load Game to Memory
