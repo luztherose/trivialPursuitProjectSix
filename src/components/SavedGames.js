@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import GameCard from "./GameCard";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import firebase from "../firebase.js";
 import SaveButton from "./SaveButton";
 
