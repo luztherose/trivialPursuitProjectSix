@@ -51,7 +51,7 @@ form {
   input[type="submit"] {
     @include button;
     color: white;
-    letter-spacing: 1px;
+    width: 50%;
   }
 
   input[type="submit"]:hover,

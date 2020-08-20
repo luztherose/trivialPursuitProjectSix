@@ -4,7 +4,7 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={(e) => this.props.handleSubmit(e)}>
-        <label>Game Name: </label>
+        <label>Game Name </label>
         <input
           name="gameName"
           type="text"
@@ -15,7 +15,7 @@ class Form extends Component {
           aria-label="write a title for your quiz"
           placeholder= "Enter a game name!"
         ></input>
-        <label> Select Category:</label>
+        <label> Category</label>
 
         <select
           name="triviaCategory"
@@ -65,7 +65,7 @@ class Form extends Component {
           <input
           type="submit"
           aria-label="select quiz options and begin game"
-          value="Select"
+          value="Game on!"
         />
 
         )}
