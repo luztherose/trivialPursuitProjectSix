@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/trivialPursuitProjectSix/static/css/main.105acafa.chunk.css",
-    "main.js": "/trivialPursuitProjectSix/static/js/main.4acf5525.chunk.js",
-    "main.js.map": "/trivialPursuitProjectSix/static/js/main.4acf5525.chunk.js.map",
+    "main.css": "/trivialPursuitProjectSix/static/css/main.0c40ce0c.chunk.css",
+    "main.js": "/trivialPursuitProjectSix/static/js/main.c64b5631.chunk.js",
+    "main.js.map": "/trivialPursuitProjectSix/static/js/main.c64b5631.chunk.js.map",
     "runtime-main.js": "/trivialPursuitProjectSix/static/js/runtime-main.306e1584.js",
     "runtime-main.js.map": "/trivialPursuitProjectSix/static/js/runtime-main.306e1584.js.map",
     "static/js/2.cebb3d59.chunk.js": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js",
     "static/js/2.cebb3d59.chunk.js.map": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js.map",
     "index.html": "/trivialPursuitProjectSix/index.html",
-    "precache-manifest.1f1d8dee26cb83ab0db55b2633fbb84b.js": "/trivialPursuitProjectSix/precache-manifest.1f1d8dee26cb83ab0db55b2633fbb84b.js",
+    "precache-manifest.65dbb71e7b5dfddcebf9777c599c57fd.js": "/trivialPursuitProjectSix/precache-manifest.65dbb71e7b5dfddcebf9777c599c57fd.js",
     "service-worker.js": "/trivialPursuitProjectSix/service-worker.js",
-    "static/css/main.105acafa.chunk.css.map": "/trivialPursuitProjectSix/static/css/main.105acafa.chunk.css.map",
+    "static/css/main.0c40ce0c.chunk.css.map": "/trivialPursuitProjectSix/static/css/main.0c40ce0c.chunk.css.map",
     "static/js/2.cebb3d59.chunk.js.LICENSE.txt": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.306e1584.js",
     "static/js/2.cebb3d59.chunk.js",
-    "static/css/main.105acafa.chunk.css",
-    "static/js/main.4acf5525.chunk.js"
+    "static/css/main.0c40ce0c.chunk.css",
+    "static/js/main.c64b5631.chunk.js"
   ]
 }
