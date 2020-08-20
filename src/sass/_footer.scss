@@ -1,19 +1,12 @@
 footer {
-  background-color: $darkestColour;
-  flex-shrink: 0;
   text-align: center;
-  padding-bottom: 3rem;
-  margin-top: auto;
+  padding: .5rem;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin: 0 auto;
+  
+
   p {
     color: $lightestColour;
-    text-shadow: 1px 1px 2px $lightMidColour;
-  }
-  a {
-    color: $lightestColour;
-    transition: color 0.3s;
-  }
-  a:hover,
-  a:focus {
-    color: $accentColour;
   }
 }

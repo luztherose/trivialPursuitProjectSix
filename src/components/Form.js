@@ -11,9 +11,12 @@ class Form extends Component {
           required="required"
           value={this.props.gameName}
           onChange={(e) => this.props.handleChange(e)}
+          aria-label="write a title for your quiz"
+          placeholder= "Enter a game name!"
         ></input>
 
         <label> Select Category:</label>
+
         <select
           name="triviaCategory"
           className="form-control"
@@ -47,7 +50,7 @@ class Form extends Component {
           <option value="32">Entertainment: Cartoon &amp; Animations</option>
         </select>
 
-        <label>Number of Questions:</label>
+        <label>Number of Questions</label>
         <select
           name="nbrOfQuestions"
           className="form-control"
@@ -59,7 +62,12 @@ class Form extends Component {
           <option value="20">20</option>
         </select>
         {this.props.gameCardReady ? null : (
-          <input type="submit" value="Select" />
+          <input
+          type="submit"
+          aria-label="select quiz options and begin game"
+          value="Select"
+        />
+
         )}
       </form>
     );
