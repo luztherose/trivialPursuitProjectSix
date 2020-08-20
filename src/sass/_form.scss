@@ -10,8 +10,7 @@ form {
   box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
   width: 500px;
   margin: 3rem auto;
- 
-  
+
 
   label {
     margin: 1rem 0;
@@ -32,7 +31,7 @@ form {
     font-family: $bodyFont;
     width: 80%;
     margin: 0 auto;
- 
+
   }
 
   input::placeholder{
@@ -41,6 +40,8 @@ form {
 
   input[type="submit"] {
     @include button;
+    color: white;
+    letter-spacing: 1px;
    
   }
 

@@ -9,7 +9,6 @@
     
     button{
       @include button;
-      background-color: transparent;
       box-shadow: none;
       border: 2px solid $darkestColour;
       color:white;
@@ -24,7 +23,6 @@
 
   .cardTitle {
     border-radius: 0.5em;
-    width:90%;
     margin: 0 auto;
 
     p{
@@ -60,16 +58,7 @@
     }
   }
 
- 
-
   .answerSpace {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    // grid-gap: 1rem;
-    // border-radius: 0.5em;
-    // padding: 1rem;
-    // margin-bottom: 1rem;
-
     display: flex;
     flex-wrap: wrap;
     
@@ -90,17 +79,17 @@
     button:hover{
       @include buttonHover;
     }
-
   }
 
   .scoreCard{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color:$accentColour;
     display:flex;
 
     p{
       margin: 0;
       padding-left: 10px;
+      font-size: 1.7rem;
     }
   }
 }
