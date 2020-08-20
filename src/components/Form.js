@@ -4,19 +4,20 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={(e) => this.props.handleSubmit(e)}>
+        <label>Game Name: </label>
+        <input
+          name="gameName"
+          className="form-control"
+          required="required"
+          value={this.props.gameName}
+          onChange={(e) => this.props.handleChange(e)}
+          aria-label="write a title for your quiz"
+          placeholder= "Enter a game name!"></input>
 
-        <label>Game Name</label>
-        <input 
-        name= "gameName"
-        type= "text"
-        className="form-control" 
-        required="required"
-        value={ this.props.gameName }
-        onChange={(e) => this.props.handleChange(e)} 
-        required="required"
-        placeholder= "enter your name here"></input>
-  
-        <label>Category</label>
+        ></input>
+
+        <label> Select Category:</label>
+
         <select
           name="triviaCategory"
           className="form-control"
@@ -62,7 +63,12 @@ class Form extends Component {
           <option value="20">20</option>
         </select>
 
-        <input type="submit" value="Game on!" />
+        <input
+          type="submit"
+          aria-label="select quiz options and begin game"
+          value="Select"
+        />
+
       </form>
     );
   }

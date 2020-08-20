@@ -6,7 +6,7 @@ class SaveButton extends Component {
       <>
         <button
           tabIndex="0"
-          aria-label="save game"
+          aria-label="load game"
           onClick={() => {
             this.props.gameToParent(this.props.thisIndex);
           }}

@@ -102,7 +102,7 @@ class GameCard extends Component {
           onClick={() => {
             saveGame(this.props.gameName, this.props.apidata);
           }}
-        
+          aria-label="save game"
         >
           Save Game
         </button>
