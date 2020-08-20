@@ -70,31 +70,33 @@ class GameCard extends Component {
       <article className="GameCard GameCardCorrect">
         <div className="cardTitle">
           <h2>{this.props.gameName}</h2>
-          <span>Question difficulty: {difficulty}</span>
-          <ScoreCard
-            score={this.state.score}
-            gameLength={this.props.apidata.length}
-            questionNumber={this.state.questionNumber}
-            quizComplete={this.state.quizComplete}
-          />
+          <div className="flexContainer">
+            <span>Question difficulty: {difficulty}</span>
+            <ScoreCard
+              score={this.state.score}
+              gameLength={this.props.apidata.length}
+              questionNumber={this.state.questionNumber}
+              quizComplete={this.state.quizComplete}
+            />
+          </div>
           <QuestionCorrect
             questionCorrect={this.state.questionCorrect}
             questionNumber={this.state.questionNumber}
           />
         </div>
-        <div>
+        <div className="questionBox">
           <p>
             Question number {this.state.questionNumber + 1}: {parse(question)}
           </p>
-        </div>
-        <div className="answerSpace">
-          {answers.map((answer, index) => {
-            return (
-              <Button key={index} onClick={() => this.checkAnswer(answer)}>
-                {parse(answer)}
-              </Button>
-            );
-          })}
+          <div className="answerSpace">
+            {answers.map((answer, index) => {
+              return (
+                <Button key={index} onClick={() => this.checkAnswer(answer)}>
+                  {parse(answer)}
+                </Button>
+              );
+            })}
+          </div>
         </div>
         <button
           onClick={() => {

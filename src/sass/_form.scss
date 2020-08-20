@@ -1,39 +1,53 @@
 form {
-  background-color: $darkestColour;
+  background-color: $lightestColour;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  border: 6px solid $accentColour;
   border-radius: 0.5em;
   margin-bottom: 2rem;
-  color: $lightestColour;
-  font-size: 1.5rem;
+  color: $darkestColour;
+  font-size: 1.2rem;
   box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
+  width: 500px;
+  margin: 3rem auto;
+
+
   label {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-family: $headingFont;
+    margin-bottom: 0.3rem;
+   
   }
-  select {
-    background-color: $backgroundColour;
-    color: $lightestColour;
+
+  select,
+  input[type="text"] {
+    color: $accentColour;
     border: 2px solid $accentColour;
     border-radius: 0.5em;
     padding: 1rem;
     margin-bottom: 1rem;
     box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
+    font-family: $bodyFont;
+    width: 80%;
+    margin: 0 auto;
+
   }
+
+  input::placeholder{
+    color:lightgrey;
+  }
+
   input[type="submit"] {
-    background-color: $backgroundColour;
-    color: $lightestColour;
-    border: 1px solid $backgroundColour;
-    border-radius: 0.25em;
-    padding: 1rem;
-    box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
-    cursor: pointer;
-    transition: all 0.2s;
+    @include button;
+    color: white;
+    letter-spacing: 1px;
+   
   }
+
   input[type="submit"]:hover,
   input[type="submit"]:focus {
-    background-color: $accentColour;
-    border: 1px solid $accentColour;
+    @include buttonHover;
   }
 
   input[type="submit"]:active {
