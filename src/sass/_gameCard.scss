@@ -34,8 +34,7 @@
       display: flex;
       margin: 0 auto;
       flex-wrap: wrap;
-      justify-content: space-between;
-
+      justify-content: center;
 
       span{
         font-size: 1.7rem;
@@ -86,6 +85,8 @@
     font-size: 1.7rem;
     color:$accentColour;
     display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     p{
       margin: 0;

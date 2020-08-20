@@ -19,6 +19,17 @@ form {
     margin-bottom: 0.3rem;
   }
 
+  .form-control{
+    color: $accentColour;
+    width: 80%;
+    align-self: center;
+    box-shadow: 5px 5px 5px rgba(39, 35, 35, 0.664);
+    border: 2px solid $accentColour;
+    border-radius: 0.5em;
+    padding: 1rem;
+
+  }
+
   select,
   input[type="text"] {
     color: $accentColour;

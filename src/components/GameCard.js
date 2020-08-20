@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Button from "./Button";
 import saveGame from ".././functionality";
 import ScoreCard from "./ScoreCard";
-import QuestionCorrect from "./QuestionCorrect";
 import parse from "html-react-parser";
 
 class GameCard extends Component {
@@ -71,7 +70,7 @@ class GameCard extends Component {
         <div className="cardTitle">
           <h2>{this.props.gameName}</h2>
           <div className="flexContainer">
-            <span>Question difficulty: {difficulty}</span>
+            <span>Question Difficulty: {difficulty}</span>
             <ScoreCard
               score={this.state.score}
               gameLength={this.props.apidata.length}
@@ -79,10 +78,6 @@ class GameCard extends Component {
               quizComplete={this.state.quizComplete}
             />
           </div>
-          <QuestionCorrect
-            questionCorrect={this.state.questionCorrect}
-            questionNumber={this.state.questionNumber}
-          />
         </div>
         <div className="questionBox">
           <p>
