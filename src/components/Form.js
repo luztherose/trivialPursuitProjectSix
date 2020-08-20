@@ -7,6 +7,7 @@ class Form extends Component {
         <label>Game Name: </label>
         <input
           name="gameName"
+          type="text"
           className="form-control"
           required="required"
           value={this.props.gameName}
@@ -14,7 +15,6 @@ class Form extends Component {
           aria-label="write a title for your quiz"
           placeholder= "Enter a game name!"
         ></input>
-
         <label> Select Category:</label>
 
         <select
