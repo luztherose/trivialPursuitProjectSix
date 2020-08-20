@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "13f97cbbb24e0dff8681e918b2c2bfb9",
+    "revision": "12230fe21dd521658febbca4ab8b4497",
     "url": "/trivialPursuitProjectSix/index.html"
   },
   {
-    "revision": "3d352a753611411321b8",
-    "url": "/trivialPursuitProjectSix/static/css/main.8d1df528.chunk.css"
+    "revision": "3278ca6901b7db8d06f1",
+    "url": "/trivialPursuitProjectSix/static/css/main.24e7b36f.chunk.css"
   },
   {
     "revision": "0e2da586453703c64b14",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/trivialPursuitProjectSix/static/js/2.cebb3d59.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3d352a753611411321b8",
-    "url": "/trivialPursuitProjectSix/static/js/main.c64b5631.chunk.js"
+    "revision": "3278ca6901b7db8d06f1",
+    "url": "/trivialPursuitProjectSix/static/js/main.aabb3543.chunk.js"
   },
   {
     "revision": "0b6048fc571364928f18",
