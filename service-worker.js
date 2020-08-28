@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/trivialPursuitProjectSix/precache-manifest.cfd9f748629fe3f7b1740cde4d919261.js"
+  "/trivialPursuitProjectSix/precache-manifest.abfee620d104aaafd1069aaf988ea397.js"
 );
 
 self.addEventListener('message', (event) => {
